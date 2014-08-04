@@ -21,4 +21,10 @@
 //= require_tree ./collections
 //= require_tree ./views
 //= require_tree ./routers
+//= require moment
+//= require bootstrap-datetimepicker
+//= require jquery
+//= require bootstrap-sprockets
+//= require jquery-ui
+
 //= require_tree .

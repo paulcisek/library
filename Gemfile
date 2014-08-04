@@ -30,6 +30,14 @@ gem 'spring',        group: :development
 gem 'rails-backbone'
 gem 'backbone-on-rails'
 gem 'ejs'
+gem 'momentjs-rails', '~> 2.5.0'
+gem 'bootstrap3-datetimepicker-rails', '~> 3.0.0'
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'autoprefixer-rails'
+gem 'jquery-ui-rails'
+gem 'debugger'
+gem "remotipart", "~> 1.0"
+gem 'paperclip', '~> 4.2.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

@@ -35,10 +35,21 @@
         $('#addBook div').children('input').each(function(i, el){
             if ($(el).val() != '')
             {
-                formData[ el.id ] = $( el ).val();
+                if ( el.id === 'keywords'){
+                    formData[el.id] = [];
+                    _.each($(el).val().split(' '), function(keyword){
+                        formData[el.id].push( keyword );
+                    });
+                } else if (el.id === 'releaseDate'){
+                    formData[el.id] = $('#releaseDate').datepicker('getDate');
+                    console.log(formData[el.id]);
+                } else {
+                    formData[el.id]=$(el).val();
+                }
             }
+            $(el).val('');
         });
-
+        
         this.collection.create(formData);
     }
 });

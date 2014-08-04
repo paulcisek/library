@@ -11,7 +11,9 @@ class BooksController < ApplicationController
 
 	def create
 		@book = Book.new(book_params)
+		debugger
 		@book.save
+		debugger
 		respond_with @book
 	end
 
@@ -25,12 +27,13 @@ class BooksController < ApplicationController
 	def destroy
 		@book = Book.find(params[:id])
 		@book.destroy
+		respond_with @book
 	end
 
 	private
 
 	def book_params
-      params.require(:book).permit(:title, :author, :releaseDate, :coverImage)
+      params.require(:book).permit(:title, :author, :releaseDate,:bookCover, :coverImage, :keywords => []) 
     end
 
 end
